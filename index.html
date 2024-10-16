@@ -4,56 +4,105 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mono Corp - MoonStock</title>
+  <title>MoonStock</title>
   <style>
-    .Body {
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
       background-color: #121212;
-    }
-
-    .text {
-      display: inline-block;
       font-family: "Lucida Console", "Courier New", monospace;
       color: white;
+      padding: 20px;
     }
 
-    .text2 {
-      font-family: "Lucida Console", "Courier New", monospace;
-      color: white;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .icon {
-      display: inline-block;
-      vertical-align: middle; /* Centraliza o ícone verticalmente em relação ao texto */
-      margin-right: 10px; /* Espaçamento opcional */
+      width: 15vw; /* Responsivo: 15% da largura da tela */
+      max-width: 100px; /* Limite máximo */
+      margin-bottom: 20px;
+    }
+
+    .text {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .text2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      max-width: 80%;
     }
 
     .space {
       color: #121212;
+      margin: 20px 0;
     }
 
     .print {
-      position: absolute;
-      right: 0; /* Alinha à direita */
-      top: 50%; /* Posiciona no meio verticalmente */
-      transform: translateY(-50%); /* Centraliza verticalmente de forma exata */
-      height: 350px;
-      width: 700px;
+      width: 80%; /* Responsivo: 80% da largura da tela */
+      max-width: 700px; /* Limite máximo */
+      height: auto; /* Ajusta automaticamente a altura */
+      margin: 20px 0;
+    }
+
+    /* Media queries para ajustar em telas menores */
+    @media (max-width: 768px) {
+      .text {
+        font-size: 2rem; /* Menor tamanho em telas menores */
+      }
+
+      .text2 {
+        font-size: 1rem; /* Ajusta tamanho do texto secundário */
+      }
+
+      .icon {
+        width: 20vw; /* Ícone maior em telas pequenas */
+      }
+
+      .print {
+        width: 100%; /* Ocupa 100% da largura da tela */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .text {
+        font-size: 1.5rem;
+      }
+
+      .text2 {
+        font-size: 0.9rem;
+      }
+
+      .icon {
+        width: 25vw;
+      }
     }
   </style>
 </head>
-<body class="Body">
-  <img class="icon" width="96" src="icon.svg">
-  <h1 class="text">MoonStock</h1>
-  <h1 class="space">   -   </h1>
-  <h2 class="text2">O MoonStock oferece uma interface intuitiva e amigável</h2>
-  <h2 class="text2">para manter o seu negócio o mais organizado e eficiente possível.</h2>
-  <h1 class="space">   -   </h1>
-  <h2 class="text2">Você pode organizar o seu estoque e fazer suas vendas</h2>
-  <h2 class="text2">em um único lugar por somente R$ 100,00 para uso vitalício</h2>
-  
-  <img class="print" height="350" width="700" src="stockprint.png">
-  <h1 class="space">   -   </h1>
-  <h2 class="text2">Caso tenha interesse, entre em contato: social.mono.softwares@gmail.com</h2>
+<body>
+  <div class="container">
+    <img class="icon" src="icon.svg" alt="Icon">
+    <h1 class="text">MoonStock</h1>
+    <h1 class="space">   -   </h1>
+    <h2 class="text2">O MoonStock oferece uma interface intuitiva e amigável</h2>
+    <h2 class="text2">para manter o seu negócio o mais organizado e eficiente possível.</h2>
+    <h1 class="space">   -   </h1>
+    <h2 class="text2">Você pode organizar o seu estoque e fazer suas vendas</h2>
+    <h2 class="text2">em um único lugar por somente R$ 100,00 para uso vitalício</h2>
+    
+    <img class="print" src="stockprint.png" alt="Stock print">
+    <h1 class="space">   -   </h1>
+    <h2 class="text2">Caso tenha interesse, entre em contato: social.mono.softwares@gmail.com</h2>
+  </div>
 </body>
 </html>
-

@@ -24,6 +24,7 @@
         );
         color: #ffffff;
         text-align: center;
+        overflow: hidden;
       }
 
       .box {
@@ -31,6 +32,7 @@
         max-width: 1200px;
         padding: 20px;
         position: relative;
+        z-index: 1; /* Certifique-se de que o conteúdo está acima da imagem */
       }
 
       .bar {
@@ -42,14 +44,19 @@
         padding: 20px;
         font-size: 24px;
         font-weight: bold;
+        z-index: 1;
+        position: relative;
       }
 
       .background-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
-        max-width: 800px;
-        margin: 20px auto;
-        position: relative;
-        display: block;
+        max-width: 1200px;
+        opacity: 0.5;
+        z-index: 0; /* Imagem fica no fundo */
       }
 
       .content {
@@ -59,6 +66,8 @@
         padding: 20px;
         margin: 20px 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        position: relative;
       }
 
       .title {
@@ -103,11 +112,6 @@
   <body>
     <div class="box">
       <div class="bar">The MONO Company</div>
-      <img
-        class="background-image"
-        src="—Pngtree—futuristic abstract colorful shape 3d_13245973.png"
-        alt="Background Art"
-      />
       <div class="content">
         <h1 class="title">Hello, YOU!</h1>
         <p class="p">
@@ -125,5 +129,10 @@
         <div class="text-wrapper-5">png image from pngtree.com</div>
       </div>
     </div>
+    <img
+      class="background-image"
+      src="img/pngtree-futuristic-abstract-colorful-shape-3d-13245973-1.png"
+      alt="Background Art"
+    />
   </body>
 </html>

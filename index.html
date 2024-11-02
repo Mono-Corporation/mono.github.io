@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Mono Company</title>
     <style>
-      /* CSS integrado para responsividade */
-      body {
+      /* CSS integrado com ajustes de responsividade */
+      body, html {
         margin: 0;
+        padding: 0;
         font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        overflow-x: hidden;
       }
 
       .box {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
         padding: 20px;
+        box-sizing: border-box;
       }
 
       .group {
         position: relative;
-        max-width: 100%;
         width: 100%;
-        overflow: hidden;
-      }
-
-      .overlap-group {
-        position: relative;
-        max-width: 100%;
+        max-width: 1200px;
         margin: 0 auto;
       }
 
@@ -42,14 +41,12 @@
           rgba(0, 13, 56, 0.8) 0%,
           rgba(85, 0, 83, 0.64) 100%
         );
+        z-index: -1;
       }
 
       .bar {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 90px;
+        height: 70px;
         background: linear-gradient(
           180deg,
           rgba(46, 0, 255, 0.79) 0%,
@@ -58,58 +55,35 @@
       }
 
       .pngtreefuturistic {
-        position: relative;
-        width: 80%;
-        max-width: 1530px;
+        width: 100%;
+        max-width: 800px;
         height: auto;
-        margin: 20px auto;
         display: block;
+        margin: 20px auto;
       }
 
       .text-wrapper {
-        position: relative;
-        margin: 20px auto;
         color: #ffffff;
-        font-size: 40px;
+        font-size: 2rem;
         text-align: center;
+        padding: 20px;
         text-shadow: 0px 4px 4px #00000040;
       }
 
-      .rectangle,
-      .div,
-      .rectangle-2 {
+      .rectangle, .div, .rectangle-2 {
         background-color: #ffffff63;
-        border-radius: 40px;
+        border-radius: 20px;
         box-shadow: 0px 4px 4px #00000040;
-        backdrop-filter: blur(109.7px) brightness(100%);
-        -webkit-backdrop-filter: blur(109.7px) brightness(100%);
-        margin: 20px auto;
+        backdrop-filter: blur(10px);
         padding: 20px;
-        width: 90%;
-        max-width: 994px;
-        text-align: center;
+        margin: 20px;
+        color: #000000;
         font-size: 1rem;
       }
 
-      .text-wrapper-2 {
-        color: #ffffffd6;
-        font-size: 2.5rem;
-        text-shadow: 0px 26px 99.3px #0000005e;
-      }
-
-      .p,
-      .text-wrapper-3,
-      .text-wrapper-4 {
-        color: #000;
-        font-size: 1.2rem;
+      .rectangle-2 {
         text-align: center;
-        margin: 10px;
-      }
-
-      .text-wrapper-5 {
-        font-size: 13px;
-        color: #ffffff;
-        text-align: right;
+        font-size: 1.1rem;
       }
 
       /* Responsividade para tablets */
@@ -118,21 +92,8 @@
           font-size: 1.5rem;
         }
 
-        .rectangle,
-        .div,
-        .rectangle-2 {
-          font-size: 1rem;
-          padding: 15px;
-        }
-
-        .text-wrapper-2 {
-          font-size: 2rem;
-        }
-
-        .p,
-        .text-wrapper-3,
-        .text-wrapper-4 {
-          font-size: 1rem;
+        .rectangle, .div, .rectangle-2 {
+          font-size: 0.9rem;
         }
       }
 
@@ -146,24 +107,7 @@
           font-size: 1.2rem;
         }
 
-        .rectangle,
-        .div,
-        .rectangle-2 {
-          padding: 10px;
-          font-size: 0.9rem;
-        }
-
-        .text-wrapper-2 {
-          font-size: 1.5rem;
-        }
-
-        .p,
-        .text-wrapper-3,
-        .text-wrapper-4 {
-          font-size: 0.9rem;
-        }
-
-        .text-wrapper-5 {
+        .rectangle, .div, .rectangle-2 {
           font-size: 0.8rem;
         }
       }
@@ -172,32 +116,34 @@
   <body>
     <div class="box">
       <div class="group">
-        <div class="overlap-group">
-          <div class="background"></div>
-          <div class="bar"></div>
-          <img class="pngtreefuturistic" src="—Pngtree—futuristic abstract colorful shape 3d_13245973.png" />
-          <div class="text-wrapper">The MONO Company</div>
-          <div class="rectangle">
-            <p class="text-wrapper-2">Hello, YOU!</p>
-          </div>
-          <div class="div">
-            <p class="p">
-              A MONO Company é especializada no desenvolvimento de aplicativos para otimizar a gestão de empresas de
-              todos os tamanhos. Nosso principal produto é o MoonStock, um gerenciador de estoque projetado para
-              simplificar o controle de inventário, automatizar tarefas e gerar insights estratégicos, ajudando nossos
-              clientes a tomar decisões com mais agilidade e precisão.
-            </p>
-          </div>
-          <div class="rectangle-2">
-            <p class="text-wrapper-3">
-              Na MONO Company, acreditamos que a tecnologia deve ser acessível e eficiente, impulsionando o crescimento
-              dos negócios. Estamos prontos para levar sua empresa ao próximo nível com soluções que transformam
-              desafios em oportunidades!
-            </p>
-          </div>
-          <div class="text-wrapper-4">Contato: social.mono.softwares@gmail.com</div>
-          <div class="text-wrapper-5">png image from pngtree.com</div>
+        <div class="background"></div>
+        <div class="bar"></div>
+        <img
+          class="pngtreefuturistic"
+          src="img/pngtree-futuristic-abstract-colorful-shape-3d-13245973-1.png"
+          alt="Background Image"
+        />
+        <div class="text-wrapper">The MONO Company</div>
+        <div class="rectangle">
+          <p>Hello, YOU!</p>
         </div>
+        <div class="div">
+          <p>
+            A MONO Company é especializada no desenvolvimento de aplicativos para otimizar a gestão de empresas de
+            todos os tamanhos. Nosso principal produto é o MoonStock, um gerenciador de estoque projetado para
+            simplificar o controle de inventário, automatizar tarefas e gerar insights estratégicos, ajudando nossos
+            clientes a tomar decisões com mais agilidade e precisão.
+          </p>
+        </div>
+        <div class="rectangle-2">
+          <p>
+            Na MONO Company, acreditamos que a tecnologia deve ser acessível e eficiente, impulsionando o crescimento
+            dos negócios. Estamos prontos para levar sua empresa ao próximo nível com soluções que transformam
+            desafios em oportunidades!
+          </p>
+        </div>
+        <div class="text-wrapper-4">Contato: social.mono.softwares@gmail.com</div>
+        <div class="text-wrapper-5">png image from pngtree.com</div>
       </div>
     </div>
   </body>

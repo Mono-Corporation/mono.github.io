@@ -5,106 +5,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mono Corp - MoonStock</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #121212;
-      font-family: "Lucida Console", "Courier New", monospace;
-      color: white;
-      padding: 20px;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .icon {
-      width: 15vw; /* Responsivo: 15% da largura da tela */
-      max-width: 100px; /* Limite máximo */
-      margin-bottom: 20px;
-    }
-
-    .text {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    .text2 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      max-width: 80%;
-    }
-
-    .space {
-      color: #121212;
-      margin: 20px 0;
-    }
-
-    .print {
-      width: 80%; /* Responsivo: 80% da largura da tela */
-      max-width: 700px; /* Limite máximo */
-      height: auto; /* Ajusta automaticamente a altura */
-      margin: 20px 0;
-      border: 3px ;
-      border-radius: 20px ;
-    }
-
-    /* Media queries para ajustar em telas menores */
-    @media (max-width: 768px) {
-      .text {
-        font-size: 2rem; /* Menor tamanho em telas menores */
-      }
-
-      .text2 {
-        font-size: 1rem; /* Ajusta tamanho do texto secundário */
-      }
-
-      .icon {
-        width: 20vw; /* Ícone maior em telas pequenas */
-      }
-
-      .print {
-        width: 100%; /* Ocupa 100% da largura da tela */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .text {
-        font-size: 1.5rem;
-      }
-
-      .text2 {
-        font-size: 0.9rem;
-      }
-
-      .icon {
-        width: 25vw;
-      }
-    }
-  </style>
 </head>
-<body>
-  <div class="container">
-    <img class="icon" src="icon.svg" alt="Icon">
-    <h1 class="text">MoonStock</h1>
-    <h1 class="space">   -   </h1>
-    <h2 class="text2">O MoonStock oferece uma interface intuitiva e amigável</h2>
-    <h2 class="text2">para manter o seu negócio o mais organizado e eficiente possível.</h2>
-    <h1 class="space">   -   </h1>
-    <h2 class="text2">Você pode organizar o seu estoque e fazer suas vendas</h2>
-    <h2 class="text2">em um único lugar por somente R$ 100,00 por um uso vitalício.</h2>
+<body class="bg-gradient-to-t from-blue-950 to-blue-900  text-[#101232] flex justify-center items-center min-h-screen">
+  <h1 class="sr-only">Glassy Profile</h1>
+  <input type="checkbox" id="data" class="sr-only peer/data"  role="switch" aria-label="Data Toggle">
+  <input type="checkbox" id="content" class="sr-only peer/content"  role="switch" aria-label="Content Toggle">
+  <div class="z-10 rounded-xl overflow-hiddenS group relative
+        before:absolute
+        before:w-32
+        before:aspect-square
+        before:rounded-full
+        before:bg-blue-600
+        before:blur-lg 
+        before:right-3
+        before:top-0
+        before:-z-10
+
+        after:absolute
+        after:w-32
+        after:aspect-square
+        after:rounded-full
+        after:bg-teal-300
+        after:blur-lg 
+        after:left-4
+        after:bottom-0
+        after:-z-10
+
+        peer-checked/data:first:[&_#toggle-data>span]:scale-0
+        peer-checked/data:last:[&_#toggle-data>span]:scale-100
+
+        peer-checked/data:[&_#panel-data]:-translate-y-14
+        peer-checked/data:[&_#panel-social]:translate-y-12
+
+        peer-checked/content:[&_#panel-content]:opacity-100
+        peer-checked/content:[&_#panel-content]:pointer-events-auto
+       ">
+    <div class="relative bg-white rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-70 w-60 p-8 text-center">
+      <img src="logo.png">
+
+      <h3 class="font-bold mt-6">The Mono Company</h3>
+      <p class="flex items-center justify-center gap-1 text-sm">
+        <span class="material-symbols-outlined text-lg">location_on</span>
+        Vianópolis, GO
+      </p>
+
+      <label for="content" class="block mt-4 cursor-pointer  text-xs rounded-full p-2 px-3 bg-[#101232] text-white transition hover:shadow-xl hover:scale-110">Sobre Nós</label>
+
+    </div>
+
+    <label id="toggle-data" for="data" class="grid [grid-template-areas:'stack'] place-content-center absolute top-4 right-4 cursor-pointer hover:scale-150 transition 
+            *:[grid-area:stack]
+            *:transition-all
+            *:duration-300
+            *:text-sm
+            last:*:scale-0
+        ">
+      <span class="material-symbols-outlined">density_large</span>
+      <span class="material-symbols-outlined">close</span>
+    </label>
+
+    <div id="panel-data" class="absolute -top-4 left-8 right-8 w-8/10 h-40  -z-20 bg-[#101232] rounded-t-md text-white p-6 pt-4 transition duration-300">
+      <p>Software Dev</p>
+      <a href="#">@monosoftwares</a>
+    </div>
+
+    <div id="panel-social" class="absolute transition duration-300 -bottom-4 left-8 right-8 p-6 pb-2 w-8/10 h-20 -z-20 bg-[#101232] text-white rounded-b-md flex items-center justify-between gap-2 [&>svg]:cursor-pointer [&>svg]:w-5 [&>svg]:h-5 [&>svg:hover]:scale-125 [&>svg]:transition">
+    </div>
     
-    <img class="print" src="stockprint.png" alt="Stock print">
-    <h1 class="space">   -   </h1>
-    <h2 class="text2">Caso tenha interesse, entre em contato: social.mono.softwares@gmail.com</h2>
+    <div class="absolute bg-white inset-0 -z-20 rounded-xl"></div>
+
+    <div id="panel-content" class="absolute bg-white inset-0 opacity-0 pointer-events-none transition-all duration-500 rounded-xl p-8 space-y-4">
+      <h2 class="font-bold">The Mono Company</h2>
+      <p class="text-sm">A MONO Company é especializada no desenvolvimento de aplicativos de todos os tipos. Nosso principal produto é o MoonStock, um gerenciador de estoque projetado para simplificar o controle de inventário.</p>
+      <label for="content" class="cursor-pointer absolute top-0 right-4  w-6 h-6 text-base text-gray-500 grid place-items-center material-symbols-outlined hover:scale-150  transition">close</label>
+    </div>
+
   </div>
 </body>
 </html>
